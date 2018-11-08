@@ -39,35 +39,6 @@ CREATE TABLE `chatbox` (
 -- Dumping data for table `chatbox`
 --
 
-INSERT INTO `chatbox` (`id`, `user_name`, `msg`, `created`) VALUES
-(1, 'vishal', 'hello', '2018-11-06 05:37:52'),
-(2, 'vikas', 'hello', '2018-11-06 05:55:19'),
-(3, 'vikas', 'okay sir how are you', '2018-11-06 05:55:41'),
-(4, 'vishal', 'i am good how are you', '2018-11-06 05:55:53'),
-(5, 'vikas', 'i am good how are you doing sir', '2018-11-06 05:56:13'),
-(6, 'vishal', 'is there any way i can help you with the', '2018-11-06 05:56:33'),
-(7, 'vishal', 'any any situattion', '2018-11-06 05:56:46'),
-(8, 'vikas', 'ye you can ', '2018-11-06 05:56:55'),
-(9, 'vikas', 'i can help you with coding system and if you', '2018-11-06 05:57:12'),
-(10, 'vikas', 'okay', '2018-11-06 06:36:35'),
-(11, 'vikas', 'hello', '2018-11-06 06:39:27'),
-(12, 'vikas', 'jillo', '2018-11-06 06:39:49'),
-(13, 'vishal', 'khilo', '2018-11-06 06:40:54'),
-(14, 'vikas', 'pilo', '2018-11-06 06:41:30'),
-(15, 'vikas', 'adsdsac', '2018-11-06 06:42:23'),
-(16, 'vishal', 'hellosir', '2018-11-06 06:48:22'),
-(17, 'vikas', 'ffas', '2018-11-06 07:46:44'),
-(18, 'vikas', 'svd', '2018-11-06 08:31:44'),
-(19, 'vikas', 'hello', '2018-11-06 10:09:13'),
-(20, 'vikas', 'where ', '2018-11-06 10:09:26'),
-(21, 'vikas', 'hey vikash', '2018-11-06 10:09:51'),
-(22, 'vikas', 'sdfds', '2018-11-06 15:48:58'),
-(23, 'vikas', 'hello', '2018-11-06 15:52:44'),
-(24, 'vikas', 'efewfwefw', '2018-11-06 15:54:43'),
-(25, 'vishal', 'hello', '2018-11-06 16:00:45'),
-(26, 'vikas', 'vikash', '2018-11-06 16:02:19'),
-(27, 'vikas', 'vikash', '2018-11-06 16:02:19'),
-(28, 'vikas', 'avava', '2018-11-06 16:02:29');
 
 -- --------------------------------------------------------
 
