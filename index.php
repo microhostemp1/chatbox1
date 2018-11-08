@@ -25,9 +25,6 @@ if(!isset($_SESSION['username']))
 <link rel="stylesheet" href="css/chat.css">
 <script src="jquery-3.3.1.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
-<script>
-$("#mylist").scrollTop($("#mylist")[0].scrollHeight);
-</script>
 </head>
 <body>
 <div class="container" style="padding-left:580px;padding-top:12px;">
@@ -37,8 +34,8 @@ $("#mylist").scrollTop($("#mylist")[0].scrollHeight);
         </form>    
 </div>
 
-<div class="col-sm-3 col-sm-offset-4 frame" style='margin-top:-8px;' id='huge'>
-            <ul id="mylist" stye="">
+<div class="col-sm-3 col-sm-offset-4 frame" style='margin-top:-8px;' id=''>
+            <ul id="scrollme" stye="width:100%;overflow-y:scroll;">
             <?php 
              $conn = new PDO("mysql:host=localhost;dbname=chatbox",'root');
              $stmt = $conn->prepare("select * from chatbox order by created");
@@ -49,7 +46,7 @@ $("#mylist").scrollTop($("#mylist")[0].scrollHeight);
                  {
                      if($_SESSION['username']==$row['user_name']){
              ?>
-            <li style="width:100%" id="bottom">
+            <li style="width:100%" id="innerScroll">
                         <div class="msj macro">
                         <div class="avatar"><img class="img-circle" style="width:100%;" src="img/unknown.png" /></div>
                             <div class="text text-l" id=""> 
@@ -62,7 +59,7 @@ $("#mylist").scrollTop($("#mylist")[0].scrollHeight);
                      else
                      {
                         ?>
-                <li style="width:100%; color:white;" id="myid">
+                <li style="width:100%; color:white;" id="">
                 
                         <div class="msj-rta macro">
                             <div class="text text-r">
@@ -107,13 +104,21 @@ url: "user/chatInsert.php",
 data: 'user_name='+user_name+'&msg='+msg,
 cache: false,
 success: function(result){
-    window.location.reload();
+    setTimeout(function(){
+           location.reload();
+      }, 2000); 
 }
 });
 }
 return false;
 });
 });
+</script>
+<script>
+    var ele = document.getElementById('scrollme');
+    var inele = document.getElementById('innerScroll');
+    var height = inele.offsetHeight;
+    ele.scrollTop = height;
 </script>
 
     </html>
